@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+html{
+  // 10px
+  font-size: 62.5%;
+
+  @include respond(tab-lan){
+    font-size: 56.25%;     //9px
+  }
+
+
+  @include respond(tab-por){
+    font-size: 50%;     //8px
+  }
+
+
+  @include respond(phn){
+    font-size: 43.75%;    //7px
+  }
+
+  
+  
+
+  @include respond(big-desk){
+    font-size: 80%;
+  }
+
+}
+
+
+
+body{
+  padding: 3rem;
+
+  @include respond(tab-por){
+    padding: 0px;
+  }
+}
+
+::selection{
+  background-color: $color-primary;
+  color: $color-white;
+}
